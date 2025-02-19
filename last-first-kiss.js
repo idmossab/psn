@@ -12,7 +12,7 @@ const last = (arg) => {
 };
 const kiss = (arg) => {
     if (typeof arg === 'string' || Array.isArray(arg)) {
-        return arg[arg.length - 1] + arg[0];
+        return (arg[arg.length - 1] + "" + arg[0]).toString();
     }
     return 'arg must be string or array';
 };
