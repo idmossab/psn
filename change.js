@@ -1,2 +1,2 @@
-const get = (key) => key;
-const set = (key, value) => key = value;
+const get = (key) => sourceObject[key];
+const set = (key, value) => sourceObject[key] = value;
