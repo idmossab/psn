@@ -10,9 +10,8 @@ const dogYears = (namePlanet, ageDogSeconds) => {
         neptune: 164.79132,
     };
     //ageDog:
-    let ageDogYear = planet[namePlanet] * 365.25;
-    let ageDogS = (ageDogYear * 31557600) / 365.25;
-    return Number((ageDogSeconds / ageDogS * 7).toFixed(2));
+    let ageDogYear = planet[namePlanet] * 31557600;
+    return Number((ageDogSeconds / ageDogYear * 7).toFixed(2));
 };
 
 console.log(dogYears("earth", 1000000000));
