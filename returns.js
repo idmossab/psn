@@ -4,6 +4,4 @@ const getLength = (arg) => {
         return arg.length;
     }
     return 0;
-}
-
-console.log(getLength(5))
+};
