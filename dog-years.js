@@ -12,5 +12,7 @@ const dogYears = (namePlanet, ageDogSeconds) => {
     //ageDog:
     let ageDogYear = planet[namePlanet] * 365.25;
     let ageDogS = (ageDogYear * 31557600) / 365.25;
-    return (ageDogSeconds / ageDogS * 7).toFixed(2);
+    return Number((ageDogSeconds / ageDogS * 7).toFixed(2));
 };
+
+console.log(dogYears("earth", 1000000000));
