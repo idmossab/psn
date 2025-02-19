@@ -1,3 +1,15 @@
-const isPositive = (nbr) => nbr >= 0 ? true : false;
-const abs = (nbr) => isPositive(nbr) ? nbr : -nbr;
-console.log(abs(0));
+const isPositive = (value) => {
+    if (value >= 0) {
+        return true;
+    } else {
+        return false;
+    }
+
+}
+const abs = (value) => {
+    if (isPositive(value)) {
+        return value;
+    } else {
+        return value * -1;
+    }
+};
