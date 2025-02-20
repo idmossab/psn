@@ -23,7 +23,7 @@ const objToMap = (obj) => {
     });
     return map;
 };
-const arrToObj = (arr) => obj = {...arr };
+const arrToObj = (arr) => Object.assign({}, arr);
 const strToObj = (str) => Object.assign({}, str);
 //----------------------
 const superTypeOf = (value) => {
