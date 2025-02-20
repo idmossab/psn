@@ -24,8 +24,24 @@ const objToMap = (obj) => {
     return map;
 };
 const arrToObj = (arr) => obj = {...arr };
-const strToObj = (str) => obj = Object.assign({}, str);
-
+const strToObj = (str) => Object.assign({}, str);
+//----------------------
+const superTypeOf = (value) => {
+    if (value === null) "null";
+    if (value instanceof Set) "Set";
+    if (value instanceof Map) "Map";
+    if (Array.isArray(value)) "Array";
+    let type = typeof value
+    switch (type) {
+        case 'string':
+            return "String";
+        case 'number':
+            return "Number";
+        case 'function':
+            return "Function";
+    }
+    return type
+};
 
 
 //console.log(strToArr("hello world"))
