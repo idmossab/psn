@@ -27,10 +27,10 @@ const arrToObj = (arr) => Object.assign({}, arr);
 const strToObj = (str) => Object.assign({}, str);
 //----------------------
 const superTypeOf = (value) => {
-    if (value === null) "null";
-    if (value instanceof Set) "Set";
-    if (value instanceof Map) "Map";
-    if (Array.isArray(value)) "Array";
+    if (value === null) return "null";
+    if (value instanceof Set) return "Set";
+    if (value instanceof Map) return "Map";
+    if (Array.isArray(value)) return "Array";
     let type = typeof value
     switch (type) {
         case 'string':
