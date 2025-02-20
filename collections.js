@@ -33,6 +33,8 @@ const superTypeOf = (value) => {
     if (Array.isArray(value)) return "Array";
     let type = typeof value
     switch (type) {
+        case 'object':
+            return "Object";
         case 'string':
             return "String";
         case 'number':
