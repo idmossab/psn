@@ -7,13 +7,9 @@ const slice = (arg, start = 0, end = arg.length) => {
     if (end < 0) end += arg.length
 
     for (let i = start; i < end; i++) {
-        if (typeof arg == 'string') {
-            res += arg[i];
-            continue
-        }
-        res[res.length] = arg[i];
+        (typeof arg == 'string' ? res += arg[i] : res[res.length] = arg[i]);
         // res.push(arg[i])
-    }
+    };
 
     return res
 };
