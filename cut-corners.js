@@ -40,21 +40,19 @@ const round = (nbr) => {
 const floor = (nbr) => {
     let mod = modulo(nbr, 1);
     if (mod == 0) return nbr;
-    let res = divide(nbr, 1);
+    let res = nbr - mod;
     return nbr >= 0 ? res : res - 1;
 
 };
 const trunc = (nbr) => {
-    /*let mod = modulo(nbr, 1);
+    let mod = modulo(nbr, 1);
     if (mod == 0) return nbr;
-    let res = divide(nbr, 1);*/
-    let res = nbr.toString();
-    let conv = Number(res.split('.').slice(0, 1));
-    return typeof conv == 'number';
+    let res = nbr - mod;
+    return res;
 };
 const ceil = (nbr) => {
     let mod = modulo(nbr, 1);
     if (mod == 0) return nbr;
-    let res = divide(nbr, 1);
+    let res = nbr - mod;
     return nbr >= 0 ? res + 1 : res;
 };
