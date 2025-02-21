@@ -56,3 +56,9 @@ const trunc = (nbr) => {
     let res = divide(nbr, 1);
     return res
 };
+
+const nums = [0.7, -3.7, 3.1, -3.1]
+console.log(nums.map(round))
+console.log(nums.map(ceil));
+console.log(nums.map(floor))
+console.log(nums.map(trunc));
