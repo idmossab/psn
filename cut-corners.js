@@ -37,16 +37,16 @@ const round = (nbr) => {
     }
     return res;
 };
-const ceil = (nbr) => {
-    let mod = modulo(nbr, 1);
-    if (mod == 0) return nbr;
-    let res = divide(nbr, 1);
-    return nbr >= 0 ? res + 1 : res;
-};
 const floor = (nbr) => {
     let mod = modulo(nbr, 1);
     if (mod == 0) return nbr;
     let res = divide(nbr, 1);
     return nbr >= 0 ? res : res - 1;
 
+};
+const trunc = (nbr) => {
+    let mod = modulo(nbr, 1);
+    if (mod == 0) return nbr;
+    let res = divide(nbr, 1);
+    return res
 };
