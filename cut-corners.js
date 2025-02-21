@@ -44,15 +44,34 @@ const floor = (nbr) => {
     return nbr >= 0 ? res : res - 1;
 
 };
-const trunc = (nbr) => {
-    let mod = modulo(nbr, 1);
-    if (mod == 0) return nbr;
-    let res = nbr - mod;
-    return res;
-};
 const ceil = (nbr) => {
     let mod = modulo(nbr, 1);
     if (mod == 0) return nbr;
     let res = nbr - mod;
     return nbr >= 0 ? res + 1 : res;
 };
+const floatTodecimal = (nbr) => {
+    while (nbr >= 1000000) {
+        nbr -= 1000000
+    }
+    while (nbr >= 1000) {
+        nbr -= 1000
+    }
+    while (nbr >= 100) {
+        nbr -= 100
+    }
+    while (nbr >= 10) {
+        nbr -= 10
+    }
+    while (nbr >= 1) {
+        nbr -= 1
+    }
+    return nbr
+}
+const trunc = (nbr) => {
+    if (nbr < 0) {
+        nbr = -nbr
+        return -(nbr - floatTodecimal(nbr))
+    }
+    return (nbr - floatTodecimal(nbr))
+}
