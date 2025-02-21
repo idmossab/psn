@@ -12,7 +12,7 @@ const multiply = (a, b) => {
     return mult;
 };
 const divide = (a, b) => {
-    count = 0;
+    let count = 0;
     let sign = 1;
     if (b == 0) return undefined;
     if (b < 0 && a < 0) {
