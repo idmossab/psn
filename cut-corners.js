@@ -69,9 +69,13 @@ const floatTodecimal = (nbr) => {
     return nbr
 }
 const trunc = (nbr) => {
-    if (nbr < 0) {
-        nbr = -nbr
-        return -(nbr - floatTodecimal(nbr))
-    }
-    return (nbr - floatTodecimal(nbr))
+    let sign = nbr >= 0;
+    nbr = Math.abs(nbr);
+    let res = nbr - floatTodecimal(nbr);
+    return sign ? res : -res;
 }
+const nums = [3.7, -3.7, 3.1, -3.1]
+console.log(nums.map(round))
+console.log(nums.map(floor))
+console.log(nums.map(trunc))
+console.log(nums.map(ceil))
