@@ -29,11 +29,11 @@ const divide = (a, b) => {
         a -= b;
         count++;
     };
-    return sign * count;
+    return multiply(sign, count);
 };
 const modulo = (a, b) => {
     let div = divide(a, b);
-    let mod = b * div
+    let mod = multiply(b, div);
     return a - mod;
 };
 console.log(multiply(-9, -2));
