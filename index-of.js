@@ -13,12 +13,9 @@ const lastIndexOf = (arr, str, start = arr.length) => {
     }
     return -1;
 };
-const includes = (arr, str) => {
-    if (indexOf(arr, str) != -1) return true;
-    return false;
-};
+const includes = (arr, str) => indexOf(arr, str) != -1 ? true : false;
 
 
 //console.log(indexOf(["hello", "how are you", "word"], "word"));
 console.log(lastIndexOf([0, 0, "t", "t"], "t", 3));
-console.log(includes(["hello", "how are you", "word"], "hello"));
+console.log(includes(["hello", "how are you", "word"], "hel4lo"));
