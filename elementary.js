@@ -1,14 +1,26 @@
 const multiply = (a, b) => {
     let mult = 0;
+    let sign = 1;
+    if (a < 0 && b > 0 || a > 0 && b < 0) {
+        sign = -1;
+    }
     if (b < 0 || a < 0) {
-        a = -a;
-        b = -b;
+        if (a < 0) {
+            a = -a;
+        }
+        if (b < 0) {
+            b = -b;
+        }
     };
     //console.log("a:", a, "b:", b);
     while (b > 0) {
         mult += a;
         b--;
     }
+    if (sign < 0) {
+        mult = -mult
+    }
+    // console.log("a:", a, "b:", b, "mult", mult);
     return mult;
 };
 const divide = (a, b) => {
@@ -36,6 +48,6 @@ const modulo = (a, b) => {
     let mod = multiply(b, div);
     return a - mod;
 };
-console.log(multiply(-9, -2));
+console.log(multiply(-22, 123));
 console.log(divide(13, 2));
 console.log(modulo(13, 2));
