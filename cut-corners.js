@@ -45,10 +45,12 @@ const floor = (nbr) => {
 
 };
 const trunc = (nbr) => {
-    let mod = modulo(nbr, 1);
+    /*let mod = modulo(nbr, 1);
     if (mod == 0) return nbr;
-    let res = divide(nbr, 1);
-    return res
+    let res = divide(nbr, 1);*/
+    let res = nbr.toString();
+    let conv = Number(res.split('.').slice(0, 1));
+    return typeof conv == 'number';
 };
 const ceil = (nbr) => {
     let mod = modulo(nbr, 1);
