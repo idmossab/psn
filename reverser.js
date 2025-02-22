@@ -1,9 +1,9 @@
 const reverse=(arg)=>{
-let res="";
+let res=[];
 for(let i=arg.length-1;i>=0;i--){
-    res+=arg[i];
+    res.push(arg[i]);
 }
-return typeof arg=='string'?res:res.split('');
+return Array.isArray(arg)?res:res.join('');
 };
-//console.log(reverse([1,5,3]));
-//console.log(reverse("hello word"));
+console.log(reverse([1,5,3]));
+console.log(reverse("hello word"));
