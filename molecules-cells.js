@@ -1,21 +1,31 @@
-const RNA=(DNA)=>{
-    let RNA=""
-    for(let i=0;i<DNA.length;i++){
-        if(DNA[i]=='G')RNA+='C';
-        if(DNA[i]=='C')RNA+='G';
-        if(DNA[i]=='T')RNA+='A';
-        if(DNA[i]=='A')RNA+='U';
+const DNA = (RNA) => {
+  let result = "";
+  for (let r of RNA) {
+    if (r == "C") {
+      result += "G";
+    } else if (r == "G") {
+      result += "C";
+    } else if (r == "A") {
+      result += "T";
+    } else if (r == "U") {
+      result += "A";
     }
-    return RNA;
-}
+  }
+  return result;
+};
 
-const DNA=(RNA)=>{
-    let DNA=""
-    for(let i=0;i<RNA.length;i++){
-        if(RNA[i]=='C')RNA+='G';
-        if(RNA[i]=='G')RNA+='C';
-        if(RNA[i]=='A')RNA+='T';
-        if(RNA[i]=='U')RNA+='A';
+const RNA = (DNA) => {
+  let result = "";
+  for (let r of DNA) {
+    if (r == "G") {
+      result += "C";
+    } else if (r == "C") {
+      result += "G";
+    } else if (r == "T") {
+      result += "A";
+    } else if (r == "A") {
+      result += "U";
     }
-    return DNA;
-}
+  }
+  return result;
+};
