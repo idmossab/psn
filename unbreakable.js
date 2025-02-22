@@ -3,7 +3,7 @@ const split = (str, sp = "") => {
   if (sp == "") return (arr = [...str]);
   let strSp = "";
   for (let j = 0; j < str.length; j++) {
-    if (str[j] === sp[0]) {
+    if (str[j] === sp[0] ) {
       if (str.slice(j, j + sp.length) == sp) {
         arr.push(strSp);
         strSp = "";
@@ -13,9 +13,8 @@ const split = (str, sp = "") => {
       strSp += str[j];
     }
   }
-  if (strSp !== "undefined" && strSp!=sp) {
-    arr.push(strSp);
-  }
+  arr.push(strSp);
+
   return arr;
 };
 const join = (arr, sp = "") => {
@@ -28,3 +27,4 @@ const join = (arr, sp = "") => {
   }
   return str;
 };
+console.log(split('a b c', ' '))
