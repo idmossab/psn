@@ -1,7 +1,7 @@
 const split = (str, sp = "") => {
     let arr = [];
     if (sp == "") return arr = [...str];
-    res = "";
+    let res = "";
     for (let i = 0; i <= str.length; i++) {
         if (str[i] == sp || i == str.length) {
             arr.push(res);
@@ -23,3 +23,4 @@ const join = (arr, sp = "") => {
     }
     return str;
 }
+console.log(split("a b c"," "))
