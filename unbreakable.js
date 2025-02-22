@@ -23,5 +23,3 @@ const join=(arr,sp="")=>{
     }
 return str;
 }
-console.log(split("hello word"));
-console.log(join(['Fire', 'Air', 'Water']));
