@@ -1,6 +1,5 @@
 const letterSpaceNumber=(str)=>{
     const reg=/\w\s\d{1}\b/g;
-    let result = str.match(reg) || [];
-    return result
+    return str.match(reg) || [];
 };
-//console.log(letterSpaceNumber('He is 8 or 9 years old, not 10.'))
+//console.log(letterSpaceNumber('He is 81 or 91 years old, not 10.'))
