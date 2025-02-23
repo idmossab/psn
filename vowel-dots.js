@@ -1,1 +1,2 @@
-const vowelDots=(str, reg = /[aeiou]/gi) => str.replace(reg,reg => reg+".")
+const vowels=/[aeiou]/gi
+const vowelDots=(str) => str.replace(vowels,vowels => vowels+".")
