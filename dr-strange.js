@@ -25,8 +25,8 @@ const addWeek = (date) => {
   console.log(difDateMs);
   let difDateDays = difDateMs / (1000 * 60 * 60 * 24);
   let getDay = days[difDateDays % 14];
-
   console.log(getDay);
+  return getDay
 };
 
-console.log(addWeek(new Date("0001-01-01")));
+//console.log(addWeek(new Date("0001-01-01")));
