@@ -30,9 +30,9 @@ const addWeek = (date) => {
 };
 const timeTravel=(obj)=>{
    let dt =obj.date;
-   dt.setHours(21);
-   dt.setMinutes(22)
-   dt.setSeconds(22)
+   dt.setHours(obj.hour);
+   dt.setMinutes(obj.minute)
+   dt.setSeconds(obj.second)
    console.log(dt)
    return dt
 }
