@@ -28,5 +28,11 @@ const addWeek = (date) => {
   console.log(getDay);
   return getDay
 };
-
-//console.log(addWeek(new Date("0001-01-01")));
+const timeTravel=(obj)=>{
+   let dt =obj.date;
+   dt.setHours(21);
+   dt.setMinutes(22)
+   dt.setSeconds(22)
+   console.log(dt)
+   return dt
+}
