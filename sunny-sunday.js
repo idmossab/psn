@@ -8,6 +8,6 @@ const sunnySunday = (date) => {
         4: "Friday",
         5: "Saturday",
     }
-    datDif = (date - dateBase) / (1000 * 60 * 60 * 24)
+    const datDif = (date - dateBase) / (1000 * 60 * 60 * 24)
     return days[datDif % 6]
 }
