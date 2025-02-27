@@ -26,13 +26,13 @@ const addWeek = (date) => {
   let difDateDays = difDateMs / (1000 * 60 * 60 * 24);
   let getDay = days[difDateDays % 14];
   console.log(getDay);
-  return getDay
+  return getDay;
 };
-const timeTravel=(obj)=>{
-   let dt =obj.date;
-   dt.setHours(obj.hour);
-   dt.setMinutes(obj.minute)
-   dt.setSeconds(obj.second)
-   console.log(dt)
-   return dt
-}
+const timeTravel = (obj) => {
+  let dt = obj.date;
+  dt.setHours(obj.hour);
+  dt.setMinutes(obj.minute);
+  dt.setSeconds(obj.second);
+  console.log(dt);
+  return dt;
+};

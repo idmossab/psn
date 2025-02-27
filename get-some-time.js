@@ -1,5 +1,5 @@
 const firstDayWeek = (nbrWeek, year) => {
-  if (nbrWeek<1  ||nbrWeek>53)return 
+  if (nbrWeek < 1 || nbrWeek > 53) return;
   let dateBase = new Date(0);
   dateBase.setFullYear(Number(year));
   if (nbrWeek == 1) {
@@ -10,8 +10,8 @@ const firstDayWeek = (nbrWeek, year) => {
   );
   //console.log("before", day);
   while (day.getDay() != 1) {
-    day.setDate(day.getDate() -1);
+    day.setDate(day.getDate() - 1);
   }
   //console.log("after", day);
-  return day.toISOString().slice(0,10).split('-').reverse().join('-');
+  return day.toISOString().slice(0, 10).split("-").reverse().join("-");
 };
