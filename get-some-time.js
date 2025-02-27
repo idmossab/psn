@@ -1,4 +1,5 @@
 const firstDayWeek = (nbrWeek, year) => {
+  if (nbrWeek<1  ||nbrWeek>53)return 
   let dateBase = new Date(0);
   dateBase.setFullYear(Number(year));
   if (nbrWeek == 1) {
