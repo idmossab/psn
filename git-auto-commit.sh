@@ -2,6 +2,10 @@
 
 # Check if a commit message is provided
 if [ -z "$1" ]; then
+    echo "⚠️  Please provide a file name!"
+    exit 1
+fi
+if [ -z "$2" ]; then
     echo "⚠️  Please provide a commit message!"
     exit 1
 fi
@@ -10,7 +14,7 @@ fi
 git add .
 
 # Commit with the provided message
-git commit -m "$1"
+git commit -m "$2"
 
 # Push changes to the main branch
 git push origin master
