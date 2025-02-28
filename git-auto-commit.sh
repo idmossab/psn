@@ -11,7 +11,7 @@ if [ -z "$2" ]; then
 fi
 
 # Add all changes
-git add .
+git add $1
 
 # Commit with the provided message
 git commit -m "$2"
