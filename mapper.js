@@ -9,12 +9,7 @@ const map = (arr, fnc) => {
 const flatMap = (arr, fnc) => {
     let res = []
     for (let i = 0; i < arr.length; i++) {
-        var v = arr[i];
-        if (v instanceof Array) {
-            Array.prototype.push.apply(arr, v.flatten());
-        } else {
-            res.push(v);
-        }
+        Array.isArray(arr[i]) ? res.push(...arr[i]) : res.push(arr[i]);
     }
     return res
 }
