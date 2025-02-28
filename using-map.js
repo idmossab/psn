@@ -29,12 +29,3 @@ const tempForecasts = (arr) => {
         return `${celsiusTemp}elsius in ${item.city}, ${state}`;
     });
 }
-
-console.log(tempForecasts([
-    {
-      city: 'Pasadena',
-      temperature: ' 101 °F',
-      state: 'california',
-      region: 'West',
-    },
-  ]));
