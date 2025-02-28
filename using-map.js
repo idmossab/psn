@@ -7,23 +7,34 @@ const upperCasingStates = (arr) => {
 };
 
 const fahrenheitToCelsius = (arr) => {
-    return arr.map(element => {
-        let fahrenheit = parseInt(element.replace('°F', '').trim()); 
+    return arr.map(item => {
+        let fahrenheit = parseInt(item.replace('°F', ''));
         let celsius = Math.floor((fahrenheit - 32) * 5 / 9);
-        return celsius + "°C"; 
+        return celsius + "°C";
     });
 };
 
 const trimTemp = (arr) => {
-    let arrMdf = arr.map(element => element.temperature.replaceAll(' ', '')); 
-    for (let i = 0; i < arr.length; i++) arr[i].temperature = arrMdf[i];   
-    return arr;
-};
-
-const tempForecasts = (arr) => {
-    return trimTemp(arr).map(element => {
-        let celsiusTemp = fahrenheitToCelsius([element.temperature])[0];   
-        let state = upperCasingStates([element.state])[0];      
-        return `${celsiusTemp}elsius in ${element.city}, ${state}`; 
+    return arr.map(item => {
+        item.temperature = item.temperature.replaceAll(' ', '');
+        return item;
     });
 };
+
+
+const tempForecasts = (arr) => {
+    return trimTemp(arr).map(item => {
+        let celsiusTemp = fahrenheitToCelsius([item.temperature])[0];
+        let state = upperCasingStates([item.state])[0];
+        return `${celsiusTemp}elsius in ${item.city}, ${state}`;
+    });
+}
+
+console.log(tempForecasts([
+    {
+      city: 'Pasadena',
+      temperature: ' 101 °F',
+      state: 'california',
+      region: 'West',
+    },
+  ]));
