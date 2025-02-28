@@ -18,7 +18,7 @@ const filter1DistinctVowel = (arr) => {
     return arr.filter(str => {
         let a = str.toLowerCase().match(reg)
         if (new Set(a).size == 1) {
-           // console.log("aa",a)
+            // console.log("aa",a)
             return a
         }
     })
@@ -34,7 +34,29 @@ const filter1Vowels = (arr) => {
     })
 }
 const multiFilter = (arr) => {
-    return arr.filter(obj => {
-        obj.capital.length >= 8 && obj.name.match(/[^aeiou]/gi).length != 0 && filter1Vowels((obj.tag).split()) && obj.region != "South"
-    })
+    return arr.filter(obj => 
+        obj.capital.length >= 8 && filterStartVowel([obj.name]).length==0&& filter1Vowels((obj.tag).split()) && obj.region != "South"
+    )
 }
+console.log(multiFilter([
+    { tag: 'CA', name: 'iCalifornia', capital: 'Sacramento', region: 'West' },
+    { tag: 'HI', name: 'Hawaii', capital: 'Honolulu', region: 'West' },
+    {
+        tag: 'MO',
+        name: 'Missouri',
+        capital: 'Jefferson City',
+        region: 'Midwest',
+    },
+    {
+        tag: 'PA',
+        name: 'Pennsylvania',
+        capital: 'Harrisburg',
+        region: 'Northeast',
+    },
+    {
+        tag: 'RI',
+        name: 'Rhode Island',
+        capital: 'Providence',
+        region: 'Northeast',
+    },
+]))
