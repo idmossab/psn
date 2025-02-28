@@ -16,8 +16,9 @@ const filter5Vowels = (arr) => {
 const filter1DistinctVowel = (arr) => {
     const reg = /[aeiou]/gi
     return arr.filter(str => {
-        let a = str.match(reg)
-        if (new Set(a).size === 1) {
+        let a = str.toLowerCase().match(reg)
+        if (new Set(a).size == 1) {
+           // console.log("aa",a)
             return a
         }
     })
@@ -37,4 +38,3 @@ const multiFilter = (arr) => {
         obj.capital.length >= 8 && obj.name.match(/[^aeiou]/gi).length != 0 && filter1Vowels((obj.tag).split()) && obj.region != "South"
     })
 }
-//console.log(filter1DistinctVowel(["helele", "aer", "fgudf", "ioueeids"]))
