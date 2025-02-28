@@ -28,9 +28,9 @@ const trimTemp = (arr) => {
 
 
 const tempForecasts = (arr) => {
-    return trimTemp(arr).map(item => {
-        let celsiusTemp = fahrenheitToCelsius([item.temperature])[0];
-        let state = upperCasingStates([item.state])[0];
+    return arr.map(item => {
+        let celsiusTemp = fahrenheitToCelsius([item.temperature]);
+        let state = upperCasingStates([item.state]);
         return `${celsiusTemp}elsius in ${item.city}, ${state}`;
     });
 }

@@ -13,4 +13,4 @@ const flat=(arr,nbr=1)=>{
     }
     return arr;
 }
-//console.log(flat([1, [2, [3], [4, [5]]]],Infinity));
+console.log(flat([1, [2, [3], [4, [5]]]],256));
