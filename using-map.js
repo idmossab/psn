@@ -8,7 +8,7 @@ const upperCasingStates = (arr) => {
 const fahrenheitToCelsius = (arr) => {
     return arr.map(temp => {
         let fahrenheit = parseInt(temp.replace('°F', ''));
-        let celsius = Math.round((fahrenheit - 32) * 5 / 9);
+        let celsius = Math.floor((fahrenheit - 32) * 5 / 9);
         return celsius + "°C";
     });
 }
