@@ -10,7 +10,7 @@ const filter5Vowels = (arr) => {
         //console.log(a)
         if (a != null) a = a.join('')
         //console.log(a)
-        return a.length > 5
+        return a.length >= 5
     })
 }
 const filter1DistinctVowel = (arr) => {
