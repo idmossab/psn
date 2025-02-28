@@ -9,7 +9,8 @@ const map = (arr, fnc) => {
 const flatMap = (arr, fnc) => {
     let res = []
     for (let i = 0; i < arr.length; i++) {
-        Array.isArray(arr[i]) ? res.push(...arr[i]) : res.push(arr[i]);
+        let result = fnc(arr[i], i, arr);
+        Array.isArray(result) ? res.push(...result) : res.push(result);
     }
-    return res
+    return res;
 }
