@@ -3,9 +3,8 @@ const citiesOnly = (arr) => {
 };
 
 const upperCasingStates = (arr) => {
-    return arr.map(ele => ele.replace(/(?<=^|\s)([a-z])/g, match => match.toUpperCase()));
+    return arr.map(ele => ele.replace(/\b\w/g, match => match.toUpperCase()));
 };
-
 const fahrenheitToCelsius = (arr) => {
     return arr.map(item => {
         let fahrenheit = parseInt(item.replace('°F', ''));
