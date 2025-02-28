@@ -1,15 +1,16 @@
-const map = (arr, fnc) => {
+const map = (arr, func) => {
     let res = []
     for (let i = 0; i < arr.length; i++) {
-        res.push(fnc(arr[i], i, arr))
+        let result = func(arr[i], i, arr)
+        res.push(result)
     }
     return res
 }
 
-const flatMap = (arr, fnc) => {
+const flatMap = (arr, func) => {
     let res = []
     for (let i = 0; i < arr.length; i++) {
-        let result = fnc(arr[i], i, arr);
+        let result = func(arr[i], i, arr);
         Array.isArray(result) ? res.push(...result) : res.push(result);
     }
     return res;
