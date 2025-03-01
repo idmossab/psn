@@ -12,13 +12,15 @@ const foldRight = (arr, func, sum = 0) => {
     }
     return sum
 }
-const reduce = (arr, func, sum = 0) => {
+const reduce = (arr, func, sum) => {
+    if (sum == undefined && typeof arr[0] != "string") sum = 0
     for (let i = 0; i < arr.length; i++) {
         sum = func(sum, arr[i])
     }
     return sum
 }
-const reduceRight = (arr, func, sum = 0) => {
+const reduceRight = (arr, func, sum) => {
+    if (sum == undefined && typeof arr[0] != "string") sum = 0
     for (let i = arr.length - 1; i >= 0; i--) {
         sum = func(sum, arr[i])
     }
