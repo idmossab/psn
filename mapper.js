@@ -1,5 +1,4 @@
-const map = (arr, func) => {
-    let res = []
+const map = (arr, func, res = []) => {
     for (let i = 0; i < arr.length; i++) {
         let result = func(arr[i], i, arr)
         res.push(result)
@@ -7,8 +6,7 @@ const map = (arr, func) => {
     return res
 }
 
-const flatMap = (arr, func) => {
-    let res = []
+const flatMap = (arr, func, res = []) => {
     for (let i = 0; i < arr.length; i++) {
         let result = func(arr[i], i, arr);
         Array.isArray(result) ? res.push(...result) : res.push(result);

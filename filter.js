@@ -1,5 +1,4 @@
-const filter = (arr, func) => {
-    let res = []
+const filter = (arr, func, res = []) => {
     for (let i = 0; i < arr.length; i++) {
         let current = arr[i]
         let check = func(arr[i], i, arr)
@@ -7,8 +6,7 @@ const filter = (arr, func) => {
     }
     return res
 }
-const reject = (arr, func) => {
-    let res = []
+const reject = (arr, func, res = []) => {
     for (let i = 0; i < arr.length; i++) {
         let current = arr[i]
         let check = func(arr[i], i, arr)
