@@ -1,11 +1,8 @@
-const citiesOnly = (arr) => {
-    return arr.map(element => element.city);
-};
-
+const citiesOnly = (arr) => arr.map(element => element.city);
 const upperCasingStates = (arr) => {
     const reg = /\b\w/g
     return arr.map(ele => ele.replace(reg, reg => reg.toUpperCase()));
-k
+    k
 };
 //console.log(upperCasingStates(['alabama', 'new jersey']))
 const fahrenheitToCelsius = (arr) => {
